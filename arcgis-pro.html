@@ -5,6 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ArcGIS Pro Projects | Landon Stitt</title>
   <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: #111;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .project-image {
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* FULLSCREEN MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .modal img {
+      max-width: 95%;
+      max-height: 95%;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 32px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,20 +66,29 @@
 
     <div class="project-grid">
 
+      <!-- PROJECT 1 -->
       <article class="project-card">
-        <img src="/images/elevation-trail.png" class="project-image" alt="Paradise Valley Trail Elevation Analysis">
+        <a href="#img1">
+          <img src="images/elevation-trail.png" class="project-image" alt="Paradise Valley Trail Elevation Analysis">
+        </a>
         <h3>Paradise Valley Trail Elevation Analysis</h3>
         <p>Raster elevation modeling and contour analysis to design 5K and 10K trail routes.</p>
       </article>
 
+      <!-- PROJECT 2 -->
       <article class="project-card">
-        <img src="/images/la-crime-50plus.png" class="project-image" alt="Crime against adults 50+ in Los Angeles">
+        <a href="#img2">
+          <img src="images/la-crime-50plus.png" class="project-image" alt="Crime against adults 50+ in Los Angeles">
+        </a>
         <h3>Violent Crime Targeting Adults 50+ (Los Angeles)</h3>
         <p>Kernel density and 80/20 spatial analysis identifying crime hotspots.</p>
       </article>
 
+      <!-- PROJECT 3 -->
       <article class="project-card">
-        <img src="/images/central-texas-bbq.png" class="project-image" alt="Central Texas BBQ Trail">
+        <a href="#img3">
+          <img src="images/central-texas-bbq.png" class="project-image" alt="Central Texas BBQ Trail">
+        </a>
         <h3>Central Texas BBQ Trail</h3>
         <p>Ranked and mapped top 15 BBQ restaurants across Central Texas.</p>
       </article>
@@ -37,6 +96,22 @@
     </div>
   </div>
 </main>
+
+<!-- MODALS -->
+<div id="img1" class="modal">
+  <a href="#" class="close">&times;</a>
+  <img src="images/elevation-trail.png">
+</div>
+
+<div id="img2" class="modal">
+  <a href="#" class="close">&times;</a>
+  <img src="images/la-crime-50plus.png">
+</div>
+
+<div id="img3" class="modal">
+  <a href="#" class="close">&times;</a>
+  <img src="images/central-texas-bbq.png">
+</div>
 
 </body>
 </html>
