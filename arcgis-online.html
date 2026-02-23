@@ -2,121 +2,113 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>ArcGIS Online & Interactive Maps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ArcGIS Online and interactive web maps by Landon Stitt.">
-  <title>ArcGIS Online & Interactive Maps | Landon Stitt</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0b0f19;
+      color: #ffffff;
+    }
+
+    .arcgis-header {
+      text-align: center;
+      padding: 60px 20px 20px 20px;
+    }
+
+    .arcgis-header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .arcgis-header p {
+      font-size: 1.2rem;
+      color: #9ca3af;
+    }
+
+    .map-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+      padding-bottom: 80px;
+    }
+
+    .map-card {
+      background: #111827;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .map-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .map-card h2 {
+      margin-bottom: 20px;
+      font-size: 1.3rem;
+    }
+
+    .map-button {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s ease;
+    }
+
+    .map-button:hover {
+      background: #1d4ed8;
+    }
+
+    @media (max-width: 768px) {
+      .arcgis-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="site-logo">Landon Stitt<span>.</span></a>
-    <nav class="nav-main">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="experience.html">Experience</a>
-      <a href="skills.html">Skills</a>
-      <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <section class="arcgis-header">
+    <h1>ArcGIS Online & Interactive Maps</h1>
+    <p>Interactive mapping applications built using ArcGIS Online and Instant Apps.</p>
+  </section>
 
-<main class="main-content">
-  <div class="container">
+  <section class="map-grid">
 
-    <header class="page-header">
-      <h1>ArcGIS Online & Interactive Maps</h1>
-      <p>Interactive mapping applications built using ArcGIS Online and Instant Apps.</p>
-    </header>
+    <div class="map-card">
+      <h2>Interactive Map 1</h2>
+      <a href="https://arcg.is/1PXjH40" target="_blank" class="map-button">
+        View Full Interactive Map
+      </a>
+    </div>
 
-    <section class="section">
-      <div class="project-grid">
+    <div class="map-card">
+      <h2>Interactive Map 2</h2>
+      <a href="https://arcg.is/1zHjX50" target="_blank" class="map-button">
+        View Full Interactive Map
+      </a>
+    </div>
 
-        <!-- MAP 1 -->
-        <article class="project-card fade-in">
-          <div class="map-placeholder">
-            Interactive Map Preview
-          </div>
+    <div class="map-card">
+      <h2>Interactive Map 3</h2>
+      <a href="https://arcg.is/Sza9O0" target="_blank" class="map-button">
+        View Full Interactive Map
+      </a>
+    </div>
 
-          <div class="project-card-body">
-            <h3>Countdown Interactive Map</h3>
-            <p>ArcGIS Online Instant App featuring interactive spatial layers, popups, and user-controlled navigation tools.</p>
-
-            <div class="project-card-actions">
-              <a href="https://tcugis.maps.arcgis.com/apps/instant/countdown/index.html?appid=24389e5840b2478dba6fbc0384455f97"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="btn btn-primary">
-                 Open Interactive Map
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- MAP 2 -->
-        <article class="project-card fade-in">
-          <div class="map-placeholder">
-            Interactive Map Preview
-          </div>
-
-          <div class="project-card-body">
-            <h3>Thematic Web Map Application</h3>
-            <p>Web-based ArcGIS Instant App showcasing thematic mapping, spatial visualization, and interactive layer control.</p>
-
-            <div class="project-card-actions">
-              <a href="https://tcugis.maps.arcgis.com/apps/instant/basic/index.html?appid=6d275f8b82df40a6adca01acd3391b0a"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="btn btn-primary">
-                 Open Interactive Map
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- MAP 3 -->
-        <article class="project-card fade-in">
-          <div class="map-placeholder">
-            Interactive Map Preview
-          </div>
-
-          <div class="project-card-body">
-            <h3>Planning & Spatial Analysis Viewer</h3>
-            <p>Interactive planning-focused ArcGIS Online application supporting spatial analysis and decision-making workflows.</p>
-
-            <div class="project-card-actions">
-              <a href="https://tcugis.maps.arcgis.com/apps/instant/basic/index.html?appid=e5af289b02974b909797b36466197d37"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="btn btn-primary">
-                 Open Interactive Map
-              </a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-  </div>
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>&copy; 2026 Landon Stitt. All rights reserved.</p>
-    <a href="https://github.com/LMStitt" target="_blank" rel="noopener noreferrer">
-      GitHub
-    </a>
-  </div>
-</footer>
+  </section>
 
 </body>
 </html>
